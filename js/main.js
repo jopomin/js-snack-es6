@@ -1,4 +1,4 @@
-var bikes = [
+/* var bikes = [
     {
         "name": "Rossa",
         "weight": 745
@@ -34,4 +34,52 @@ bikes.sort(function(bike1, bike2) {
 var {name, weight} = bikes[0];
 console.log(`
 la bici più leggera è ${bikes[0].name} dal peso di ${bikes[0].weight} grammi.
-`);
+`); */
+
+var teams = [
+    {
+        "name": "Juventus",
+        "points": 0,
+        "fouls": 0 
+    },
+    {
+        "name": "Inter",
+        "points": 0,
+        "fouls": 0 
+    },
+    {
+        "name": "Milan",
+        "points": 0,
+        "fouls": 0 
+    },
+    {
+        "name": "Atalanta",
+        "points": 0,
+        "fouls": 0 
+    },
+    {
+        "name": "Napoli",
+        "points": 0,
+        "fouls": 0 
+    },
+    {
+        "name": "Roma",
+        "points": 0,
+        "fouls": 0 
+    }
+],
+
+var numR;
+
+function genRand(min, max) {
+    var numR = Math.floor(Math.random()*(max-min+1)+min);
+    return numR;
+}
+
+for(var i = 0; i < teams.length; i++) {
+    teams[i].points = genRand(75,95);
+    teams[i].fouls = genRand(300,400);
+}
+
+var {name, fouls} = teams;
+console.log(name, fouls);
