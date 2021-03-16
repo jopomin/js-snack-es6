@@ -1,4 +1,4 @@
-var bikes = [
+/* var bikes = [
     {
         "team": "Rossa",
         "weight": 745
@@ -80,3 +80,24 @@ teams.forEach(team => {
 });
 
 
+ */
+
+const COLORS = ["giallo", "verde", "blu", "acquamarina", "viola", "carminio", "beige", "senape"];
+
+const NUMB = Math.floor(Math.random()*(COLORS.length-1)+1);
+console.log(NUMB);
+const NUMA = Math.floor(Math.random()*(NUMB-1));
+console.log(NUMA);
+
+function range(array, min, max) {
+var arRange = [];
+array.forEach((element, index) => {
+    if (index >= min && index <= max) {
+        arRange.push(element);   
+    }
+});
+return arRange;
+}
+
+var arDiff = range(COLORS, NUMA, NUMB);
+console.log(arDiff);
