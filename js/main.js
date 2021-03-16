@@ -89,7 +89,7 @@ console.log(NUMB);
 const NUMA = Math.floor(Math.random()*(NUMB-1));
 console.log(NUMA);
 
-function range(array, min, max) {
+/* function range(array, min, max) {
 var arRange = [];
 array.forEach((element, index) => {
     if (index >= min && index <= max) {
@@ -100,4 +100,12 @@ return arRange;
 }
 
 var arDiff = range(COLORS, NUMA, NUMB);
+console.log(arDiff); */
+
+function range(array, min, max) {
+    var arRange = array.filter((element, index) => (index >= min && index <= max));
+    return arRange;
+}
+
+var arDiff = range(COLORS, NUMA, NUMB)
 console.log(arDiff);
